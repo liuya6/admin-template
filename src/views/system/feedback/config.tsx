@@ -1,7 +1,7 @@
 import { FormSchema } from '/@/components/Form';
 import { TableData } from '/@/components/MTable';
 import { MPConfirmConfig, MPConfirm } from '/@/components/MPConfirm';
-// import { MImg } from '/@/components/MImg';
+import { MImg } from '/@/components/MImg';
 
 const schemas = (): FormSchema[] => {
   return [
@@ -55,8 +55,7 @@ const tableTitle = (changeStatus: Function): TableData[] => {
       field: 'imgArray',
       render: (scope) => {
         const { row } = scope;
-        // return <MImg imgData={row.imgArray} />;
-        return row.imgArray;
+        return <MImg imgData={row.imgArray} />;
       },
     },
     {
