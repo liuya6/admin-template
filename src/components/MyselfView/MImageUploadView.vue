@@ -24,7 +24,6 @@
   import { Modal, Upload } from 'ant-design-vue';
   import { postFile } from '/@/api/sys/SysSetting';
   import {
-    FileBean,
     FileItem,
     formatFileBeanList,
     formatFileList,

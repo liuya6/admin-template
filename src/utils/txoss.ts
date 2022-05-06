@@ -1,5 +1,5 @@
 import * as SparkMD5 from 'spark-md5';
-import { getTxToken } from '/@/api/sys/SysSetting';
+// import { getTxToken } from '/@/api/sys/SysSetting';
 import COS from 'cos-js-sdk-v5';
 
 export default class TxOssx {
@@ -13,7 +13,11 @@ export default class TxOssx {
   config: any = {};
 
   private async updateConfig() {
-    const data = await getTxToken();
+    // const data = await getTxToken();
+    const data: any = {
+      code: 200,
+      result: {},
+    };
     if (data != null && data.code == 200 && data.result != null) {
       const value = data.result;
       this.config = data.result;

@@ -8,7 +8,6 @@ import { ROLES_KEY, TOKEN_KEY, USER_INFO_KEY } from '/@/enums/cacheEnum';
 import { getAuthCache, setAuthCache } from '/@/utils/auth';
 import { LoginParams } from '/@/api/sys/model/userModel';
 import { doLogout, getUserInfo } from '/@/api/sys/user';
-import { UserService } from '/@/api';
 
 import { useI18n } from '/@/hooks/web/useI18n';
 import { useMessage } from '/@/hooks/web/useMessage';
@@ -92,7 +91,8 @@ export const useUserStore = defineStore({
     ) {
       try {
         const { goHome = true, ...loginParams } = params;
-        const { result } = await UserService.login(loginParams);
+        const result = '1111';
+        // const { result } = await UserService.login(loginParams);
         this.setToken(result);
         return this.afterLoginAction(goHome);
       } catch (error) {

@@ -15,9 +15,7 @@
 
       return () => (
         <div class="base">
-          <PageWrapper>
-            index1
-          </PageWrapper>
+          <PageWrapper>index1</PageWrapper>
         </div>
       );
     },

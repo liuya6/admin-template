@@ -8,6 +8,13 @@ export interface TableData {
   total: number;
 }
 
+export interface ResponseData {
+  result: TableData;
+  code: number;
+  message: string;
+  type: string;
+}
+
 export interface BasicFetchResult<T> {
   items: T[];
   total: number;

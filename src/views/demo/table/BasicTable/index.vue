@@ -42,8 +42,9 @@
       function initData() {
         return getTableData(async () => {
           const data = await getDemoTableData(params);
-          tableData.value = data.list;
-          total.value = data.total;
+          console.log(data, 'data');
+          tableData.value = data.result.list;
+          total.value = data.result.total;
         });
       }
     },
