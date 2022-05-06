@@ -3,7 +3,6 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = (req, res) => {
   let target = '';
-
   // 代理目标地址
   if (req.url.startsWith('/api')) {
     target = 'http://bounties.202725.com';
@@ -15,7 +14,7 @@ module.exports = (req, res) => {
     pathRewrite: {
       // 通过路径重写，去除请求路径中的 `/api`
       // 例如 api/user/login 将被转发到 http://backend-api.com/user/login
-      '^/api/': '/',
+      '^/api/': '',
     },
   })(req, res);
 };
