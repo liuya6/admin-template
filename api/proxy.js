@@ -6,7 +6,7 @@ module.exports = (req, res) => {
 
   // 代理目标地址
   if (req.url.startsWith('/api')) {
-    target = 'http://bounties.202725.com/';
+    target = 'http://bounties.202725.com';
   }
   // 创建代理对象并转发请求
   createProxyMiddleware({
