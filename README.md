@@ -39,13 +39,13 @@
 - 获取项目代码
 
 ```bash
-git clone https://gitlab.dangwan.com/harlan/bounty-admin.git
+git clone https://github.com/liuya6/admin-template.git
 ```
 
 - 安装依赖
 
 ```bash
-cd vue-vben-admin
+cd admin-template
 
 pnpm install
 
