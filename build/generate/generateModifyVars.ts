@@ -18,8 +18,7 @@ export function generateModifyVars(dark = false) {
   const modifyVars = getThemeVariables({ dark });
   return {
     ...modifyVars,
-    // Used for global import to avoid the need to import each style file separately
-    // reference:  Avoid repeated references
+    // 用于全局导入，避免需要单独导入每个样式文件
     hack: `${modifyVars.hack} @import (reference) "${resolve('src/design/config.less')}";`,
     'primary-color': primary,
     ...primaryColorObj,
