@@ -1,8 +1,7 @@
 import { defHttp } from '/@/utils/http/axios';
-import { ResponseData } from '../model/baseModel';
 
 export function getDemoTableData(params: any) {
-  return defHttp.get<ResponseData>({
+  return defHttp.get({
     url: 'basic-api/getDemoList',
     params,
   });

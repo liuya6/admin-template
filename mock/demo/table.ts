@@ -28,3 +28,5 @@ export default [
     },
   },
 ] as MockMethod[];
+
+export { demoList };

@@ -33,6 +33,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
 
   return {
     base: VITE_PUBLIC_PATH,
+    // base: './',
     root,
     resolve: {
       alias: [
