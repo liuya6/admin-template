@@ -10,8 +10,6 @@ Object.keys(modules).forEach((key) => {
   mockModules.push(...modules[key].default);
 });
 
-console.log(mockModules, 'mockModules');
-
 /**
  * 在生产环境中使用。需要手动导入所有模块 主要用于演示
  */

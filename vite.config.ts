@@ -20,6 +20,8 @@ const __APP_INFO__ = {
 };
 
 export default ({ command, mode }: ConfigEnv): UserConfig => {
+  console.log(command, 'command');
+
   const root = process.cwd();
 
   const env = loadEnv(mode, root);
