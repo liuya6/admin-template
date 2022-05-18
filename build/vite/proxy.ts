@@ -17,8 +17,6 @@ export function createProxy(list: ProxyList = []) {
   for (const [prefix, target] of list) {
     const isHttps = httpsRE.test(target);
 
-    console.log(target, 'target');
-
     ret[prefix] = {
       target: target,
       changeOrigin: true,

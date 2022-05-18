@@ -9,7 +9,7 @@ export function configPwaConfig(env: ViteEnv) {
 
   if (VITE_USE_PWA) {
     // vite-plugin-pwa
-    const pwaPlugin = VitePWA({
+    return VitePWA({
       manifest: {
         name: VITE_GLOB_APP_TITLE,
         short_name: VITE_GLOB_APP_SHORT_NAME,
@@ -27,7 +27,6 @@ export function configPwaConfig(env: ViteEnv) {
         ],
       },
     });
-    return pwaPlugin;
   }
   return [];
 }
